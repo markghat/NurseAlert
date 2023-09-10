@@ -71,3 +71,4 @@ struct HospitalView: View{
         }
     }
 }
+

@@ -12,6 +12,11 @@ struct ContentView: View {
     var body: some View {
         Text("hello")
     }
+    
+    private func request() {
+        print("hello")
+        return
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

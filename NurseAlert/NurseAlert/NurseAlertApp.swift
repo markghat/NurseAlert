@@ -12,7 +12,7 @@ struct NurseAlertApp: App {
     @StateObject var dataLoader = DataLoader(apiClient: DataLoaderAPIService())
     var body: some Scene {
         WindowGroup {
-            HospitalViewV2()
+            HomeView()
                 .environmentObject(dataLoader)
         }
     }

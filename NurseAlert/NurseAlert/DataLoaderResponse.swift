@@ -11,7 +11,9 @@ struct DataLoaderResponse {
     var hospitals: [Hospital]
     
     static func mock() -> [Hospital] {
-        [Hospital(id: 1, hospital_name: "dummy", image_url: "Duke-Hospital-Logo")]
+        [Hospital(id: 1, hospital_name: "Duke University Hospital", image_url: "Duke-Hospital-Logo"),
+         Hospital(id: 2, hospital_name: "N.C. Memorial Hospital", image_url: "UNC-Hospital-Logo"),
+         Hospital(id: 3, hospital_name: "Wake Medical Center", image_url: "WakeForest-Hospital-Logo")]
     }
 }
 

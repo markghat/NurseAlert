@@ -17,7 +17,9 @@ struct HospitalViewV2: View {
             case .loading: ProgressView()
             case .failed: Text("Could not load description.")
             case .success(let response):
-                Text(response[0].hospital_name)
+                ForEach(response, id: \.self) { hospital in
+                    Text(hospital.hospital_name)
+                }
             }
         }
         .task { await  hospitalsLoader.loadHospitalData(queryId: "https://97lvc2d422.execute-api.us-east-1.amazonaws.com/test/getHospitals") }

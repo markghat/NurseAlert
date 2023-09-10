@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct RoomListView: View {
+struct NurseView: View {
     var hospital_id: Int
     
     var body: some View {
         NavigationLink(destination: ChatView(hospital_id: hospital_id, room_id: 2)){
-            List(getRoomsInHospital(hospital_id: 5), id: \.self) { room in
+            List(getRoomsInHospital(hospital_id: 1), id: \.self) { room in
                 NavigationLink {
                     // TODO: send to LLM chat
                 } label: {
@@ -25,7 +25,7 @@ struct RoomListView: View {
     }
 }
 
-struct RoomRow: View {
+struct NurseRow: View {
     var room: Room
     var body: some View {
         HStack(alignment: .center) {
@@ -48,7 +48,7 @@ struct RoomRow: View {
     }
 }
 
-struct RoomListView_Previews: PreviewProvider {
+struct NurseView_Previews: PreviewProvider {
     static var previews: some View {
         RoomListView(hospital_id: 1)
     }

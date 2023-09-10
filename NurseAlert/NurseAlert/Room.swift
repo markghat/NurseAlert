@@ -15,7 +15,7 @@ struct Room: Identifiable, Hashable {
     var number_employees: Int
 }
 
-func getRoomsInHospital(hospital_id: String) -> [Room] {
+func getRoomsInHospital(hospital_id: Int) -> [Room] {
     // code
 //    let response = URLSession("String to API Gateway")
     return [Room(id: 1, room_name: "Room 124", hospital_id: 5, division: "Intensive Care", number_employees: 5),

@@ -1,133 +1,104 @@
 import SwiftUI
 
-//struct HospitalView: View {
-    //var body: some View {
-        //List(getHospital(), id: \.self) { hospital in
-            //HStack {
-                //Image(hospital.image_url)
-                    //.resizable()
-                    //.frame(width: 30, height: 20)
-                //Text(hospital.hospital_name).fontWeight(.semibold)
-            //}
-           // .padding(.vertical, 20)
-       // }
-    //}
-//}
-
 struct HospitalView: View {
-//    @State private var hospitals: [Hospital]?
-//    @State private var txt: String?
-    var hospitals = getHospital() // Assuming you have a function to retrieve hospitals
-    
+    @State private var selectedHospital: Hospital?
+    @State private var isPopUpVisible = false
+    @State private var isNavigatingToRoomList = false
+    @EnvironmentObject var hospitalsLoader: DataLoader
     var body: some View {
-        
-        List(hospitals, id: \.self) { hospital in
-            NavigationLink(destination: RoomListView()) { // Navigate to ChatView
-                HStack{
-                    Image(hospital.image_url)
-                        .resizable()
-                        .frame(width: 30, height: 20)
-                    Text(hospital.hospital_name)
-                        .foregroundColor(Color.black)
-                    Spacer()
-                    Image(systemName: "arrow.right")
-                        .foregroundColor(Color.black)
-                }//: HSTACK
-                .padding(20)
-                .navigationTitle("Select Hospital")
-                .fontDesign(.rounded)
+            List {
+                switch hospitalsLoader.state {
+                case .idle: Color.clear
+                case .loading: ProgressView()
+                case .failed: Text("Could not load description.")
+                case .success(let response):
+                ForEach(response, id: \.self) { hospital in
+                    Button(action: {
+                        selectedHospital = hospital
+                        isPopUpVisible.toggle()
+                    }) {
+                        HStack{
+                            Image(hospital.image_url)
+                                .resizable()
+                                .frame(width: 30, height: 20)
+                            Text(hospital.hospital_name)
+                                .foregroundColor(Color.black)
+                            Spacer()
+                            Image(systemName: "arrow.right")
+                                .foregroundColor(Color.black)
+                        }
+                        .padding(20)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10, style: .circular)
+                                .stroke(Color.black, lineWidth: 2)
+                        )
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.clear)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10, style: .circular).stroke(Color.black, lineWidth: 2)
+                    )
+                    .foregroundColor(Color(uiColor: .tertiaryLabel))
+                }
             }
-            .buttonStyle(PlainButtonStyle()) // Remove button styling
-            .frame(maxWidth: .infinity, alignment: .leading) // Fill the entire row
-            .background(Color.clear) // Clear background
-            .overlay(
-                RoundedRectangle(cornerRadius: 10, style: .circular).stroke(Color.black, lineWidth: 2)
-            )
-            .foregroundColor(Color(uiColor: .tertiaryLabel))
-        }//: LIST
-        .listStyle(InsetListStyle())
-//        .onAppear { getHospitals() }
+        }
+        .overlay(
+            PopUpView(isVisible: $isPopUpVisible) {
+                VStack {
+                    // Hide the NavigationLink, but keep it functional
+                    
+                    NavigationLink(destination: RoomListView(hospital_id: 5)) {
+                        Text("Patient")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                    }
+                    
+                    NavigationLink(destination: RoomListViewNurse()) {
+                        Text("Provider")
+                            .padding()
+                    }
+                }
+            }
+        )
+        .task { await  hospitalsLoader.loadHospitalData(queryId: "https://97lvc2d422.execute-api.us-east-1.amazonaws.com/test/getHospitals") }
     }
-    
-//    func getHospitals() {
-//        guard let url = URL(string: "https://97lvc2d422.execute-api.us-east-1.amazonaws.com/test/getHospitals")
-//        else {
-//            return
-//        }
-//        let request = NSMutableURLRequest(url: url as URL)
-//            request.httpMethod = "GET"
-//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        var jsonString = "emptyString"
-//        let task: Void = URLSession.shared.dataTask(with: request as URLRequest) {
-//            data, response, error in
-//            if let data = data, let string = String(data: data, encoding: .utf8) {
-////                self.hospitals = toHospitalList(jsonString: string)
-//                self.txt = string
-//
-//            } else {
-//                return
-//            }
-//        }.resume()
-//    }
-//    func toHospitalList(jsonString: String) -> [Hospital] {
-//        let jsonDecoder = JSONDecoder()
-//        let jsonData = jsonString.data(using: .utf8)
-//        do {
-//            let hospitals = try jsonDecoder.decode([Hospital].self, from: jsonData!)
-//            return hospitals
-//        } catch {
-//            return []
-//        }
-//    }
 }
 
-//func toHospitalList(jsonString: String) -> [Hospital] {
-//    let jsonDecoder = JSONDecoder()
-//    let jsonData = jsonString.data(using: .utf8)
-//    do {
-//        let hospitals = try jsonDecoder.decode([Hospital].self, from: jsonData!)
-//        return hospitals
-//    } catch {
-//        return []
-//    }
-//}
-
-//func getHospitals() -> [Hospital] {
-//    guard let url = URL(string: "https://97lvc2d422.execute-api.us-east-1.amazonaws.com/test/getHospitals")
-//    else {
-//        return []
-//    }
-//    let request = NSMutableURLRequest(url: url as URL)
-//        request.httpMethod = "GET"
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//    var jsonString = "emptyString"
-//    let task: Void = URLSession.shared.dataTask(with: request as URLRequest) {
-//        data, response, error in
-//        if let data = data, let string = String(data: data, encoding: .utf8) {
-//            jsonString = string
-//
-//        } else {
-//            return
-//        }
-//    }.resume()
-//    print(jsonString)
-//    return toHospitalList(jsonString: jsonString)
-//}
-//
-//func toHospitalList(jsonString: String) -> [Hospital] {
-//    let jsonDecoder = JSONDecoder()
-//    let jsonData = jsonString.data(using: .utf8)
-//    do {
-//        let hospitals = try jsonDecoder.decode([Hospital].self, from: jsonData!)
-//        return hospitals
-//    } catch {
-//        return []
-//    }
-//}
+struct PopUpView<Content: View>: View {
+    @Binding var isVisible: Bool
+    let content: () -> Content
+    
+    var body: some View {
+        GeometryReader { geometry in
+            if isVisible {
+                ZStack {
+                    Color.black.opacity(0.4)
+                        .onTapGesture {
+                            isVisible = false
+                        }
+                    
+                    VStack {
+                        content()
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .padding()
+                    }
+                    .frame(width: geometry.size.width * 0.8, height: 150) // Adjust the size as needed
+                    .background(Color.clear)
+                    .cornerRadius(10)
+                }
+                .transition(.opacity)
+            }
+        }
+    }
+}
 
 struct HospitalView_Previews: PreviewProvider {
     static var previews: some View {
         HospitalView()
+            .environmentObject(DataLoader(apiClient: MockDataLoaderAPIService()))
     }
 }
 

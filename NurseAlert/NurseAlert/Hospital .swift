@@ -23,7 +23,7 @@ struct Hospital: Identifiable, Hashable, Decodable {
 }
 
 func getHospital() -> [Hospital] {
-   return [Hospital(id: 1, hospital_name: "Duke University Hospital", image_url: "Duke-Hospital-Logo"), Hospital(id: 2, hospital_name: "UNC", image_url: "UNC-Hospital-Logo"), Hospital(id: 3, hospital_name: "Wake Forest", image_url: "WakeForest-Hospital-Logo"), Hospital(id: 4, hospital_name: "NC State", image_url: "NCState-Hospital-Logo")]
+   return [Hospital(id: 1, hospital_name: "Duke University Hospital", image_url: "Duke-Hospital-Logo"), Hospital(id: 2, hospital_name: "N.C. Memorial Hospital", image_url: "UNC-Hospital-Logo"), Hospital(id: 3, hospital_name: "Wake Forest Baptist Medical Center", image_url: "WakeForest-Hospital-Logo")]
 
 }
 

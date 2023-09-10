@@ -12,7 +12,7 @@ struct RoomListView: View {
     
     var body: some View {
         NavigationLink(destination: ChatView(hospital_id: hospital_id, room_id: 2)){
-            List(getRoomsInHospital(hospital_id: 1), id: \.self) { room in
+            List(getRoomsInHospital(hospital_id: 5), id: \.self) { room in
                 NavigationLink {
                     // TODO: send to LLM chat
                 } label: {

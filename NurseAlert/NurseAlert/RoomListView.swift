@@ -10,7 +10,7 @@ import SwiftUI
 struct RoomListView: View {
     
     var body: some View {
-        NavigationView {
+        NavigationLink(destination: ChatView()){
             List(getRoomsInHospital(hospital_id: "1"), id: \.self) { room in
                 NavigationLink {
                     // TODO: send to LLM chat

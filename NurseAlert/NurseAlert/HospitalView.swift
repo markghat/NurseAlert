@@ -20,7 +20,7 @@ struct HospitalView: View {
     
     var body: some View {
             List(hospitals, id: \.self) { hospital in
-                NavigationLink(destination: ChatView()) { // Navigate to ChatView
+                NavigationLink(destination: RoomListView()) { // Navigate to ChatView
                     HStack{
                         Image(hospital.image_url)
                             .resizable()
@@ -32,6 +32,8 @@ struct HospitalView: View {
                             .foregroundColor(Color.black)
                     }//: HSTACK
                     .padding(20)
+                    .navigationTitle("Select Hospital")
+                    .fontDesign(.rounded)
                 }
                 .buttonStyle(PlainButtonStyle()) // Remove button styling
                 .frame(maxWidth: .infinity, alignment: .leading) // Fill the entire row

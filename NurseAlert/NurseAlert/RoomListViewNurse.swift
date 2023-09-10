@@ -15,7 +15,7 @@ struct RoomListViewNurse: View {
                 NavigationLink {
                     // TODO: send to LLM chat
                 } label: {
-                    RoomRow(room: room)
+                    RoomRowNurse(room: room)
                 }
             }
             .navigationTitle("Select Room")

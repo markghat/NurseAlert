@@ -16,7 +16,7 @@ struct Hospital: Identifiable, Hashable{
 }
 
 func getHospital() -> [Hospital] {
-   return [Hospital(id: 1, hospital_name: "Duke University Hospital", image_url: "Duke-Hospital-Logo"), Hospital(id: 2, hospital_name: "N.C. Memorial Hospital", image_url: "UNC-Hospital-Logo"), Hospital(id: 3, hospital_name: "Wake Forest Baptist Medical Center", image_url: "WakeForest-Hospital-Logo"), Hospital(id: 4, hospital_name: "Cedars Sinai Medical Center", image_url: "Cedars-Hospital-Logo"), Hospital(id: 5, hospital_name: "Children's Hospital Los Angeles", image_url: "CHLA-Hospital-Logo"), Hospital(id: 6, hospital_name: "Northwestern Memorial Hospital", image_url: "Northwestern-Hospital-Logo"), Hospital(id: 7, hospital_name: "UChicago Medicine", image_url: "UChicago-Hospital-Logo"), Hospital(id: 8, hospital_name: "Mayo Clinic", image_url: "MayoClinic-Hospital-Logo"), Hospital(id: 9, hospital_name: "Massachusetts General Hospital", image_url: "MassGen-Hospital-Logo", Hospital(id: 10, hospital_name: "Johns Hopkins Hospital", image_url: "Hopkins-Hospital-Logo"))]
+   return [Hospital(id: 1, hospital_name: "Duke University Hospital", image_url: "Duke-Hospital-Logo"), Hospital(id: 2, hospital_name: "N.C. Memorial Hospital", image_url: "UNC-Hospital-Logo"), Hospital(id: 3, hospital_name: "Wake Forest Baptist Medical Center", image_url: "WakeForest-Hospital-Logo"), Hospital(id: 4, hospital_name: "Cedars Sinai Medical Center", image_url: "Cedars-Hospital-Logo")]
 
 }
 

@@ -10,7 +10,7 @@ import SwiftUI
 struct RoomListViewNurse: View {
     
     var body: some View {
-        NavigationLink(destination: NurseView()){
+        NavigationLink(destination: NurseView(hospital_id: 5)){
             List(getRoomsInHospital(hospital_id: 1), id: \.self) { room in
                 NavigationLink {
                     // TODO: send to LLM chat
@@ -49,6 +49,6 @@ struct RoomRowNurse: View {
 
 struct RoomListViewNurse_Previews: PreviewProvider {
     static var previews: some View {
-        RoomListView(hospital_id: 1)
+        RoomListViewNurse()
     }
 }

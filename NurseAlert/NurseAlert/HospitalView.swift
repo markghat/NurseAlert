@@ -19,7 +19,6 @@ struct HospitalView: View {
     var hospitals = getHospital() // Assuming you have a function to retrieve hospitals
     
     var body: some View {
-        NavigationView {
             List(hospitals, id: \.self) { hospital in
                 NavigationLink(destination: ChatView()) { // Navigate to ChatView
                     HStack{
@@ -43,6 +42,5 @@ struct HospitalView: View {
                 .foregroundColor(Color(uiColor: .tertiaryLabel))
             }//: LIST
             .listStyle(InsetListStyle())
-        }
     }
 }

@@ -36,11 +36,15 @@ struct NurseRow: View {
                     .font(.footnote)
             }
             Spacer()
-            Image(systemName: "person.fill")
-                .foregroundColor(.blue)
-                .aspectRatio(contentMode: .fit)
-//            Text(String(room.number_employees))
-//                .foregroundColor(.gray)
+            if (nurse.id / 2 == 0) {
+                Circle()
+                    .foregroundColor(.red)
+                    .frame(width: 20, height: 20)
+            } else {
+                Circle()
+                    .foregroundColor(.green)
+                    .frame(width: 20, height: 20)
+            }
         }
         .frame(height: 60)
     }

@@ -63,7 +63,7 @@
 		D96688A62AAD66D6006410B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D9A614FC2AADCE0100BB6BC6 /* RoomListViewNurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewNurse.swift; sourceTree = "<group>"; };
 		D9A614FE2AADCE5F00BB6BC6 /* NurseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseView.swift; sourceTree = "<group>"; };
-		D9A615022AADE48100BB6BC6 /* Nurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurse.swift; sourceTree = "<group>"; };
+		D9A615022AADE48100BB6BC6 /* Nurse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Nurse.swift; path = ../Nurse.swift; sourceTree = "<group>"; };
 		D9D48F132AAD7DF000205D64 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D9D48F152AAD7E0500205D64 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +96,6 @@
 		61AB36072AAC2A1200AD7DFB = {
 			isa = PBXGroup;
 			children = (
-				D9A615022AADE48100BB6BC6 /* Nurse.swift */,
 				61AB36122AAC2A1200AD7DFB /* NurseAlert */,
 				61AB36232AAC2A1300AD7DFB /* NurseAlertTests */,
 				61AB362D2AAC2A1300AD7DFB /* NurseAlertUITests */,
@@ -117,6 +116,7 @@
 		61AB36122AAC2A1200AD7DFB /* NurseAlert */ = {
 			isa = PBXGroup;
 			children = (
+				D9A615022AADE48100BB6BC6 /* Nurse.swift */,
 				61AB36132AAC2A1200AD7DFB /* NurseAlertApp.swift */,
 				61AB36152AAC2A1200AD7DFB /* ContentView.swift */,
 				D96688A62AAD66D6006410B7 /* HomeView.swift */,

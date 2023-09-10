@@ -10,12 +10,12 @@ import SwiftUI
 struct RoomListViewNurse: View {
     
     var body: some View {
-        NavigationLink(destination: NurseView()){
+        NavigationLink(destination: NurseView(hospital_id: 5)){
             List(getRoomsInHospital(hospital_id: 5), id: \.self) { room in
                 NavigationLink {
                     // TODO: send to LLM chat
                 } label: {
-                    RoomRow(room: room)
+                    RoomRowNurse(room: room)
                 }
             }
             .navigationTitle("Select Room")

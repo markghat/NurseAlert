@@ -49,6 +49,6 @@ struct RoomRowNurse: View {
 
 struct RoomListViewNurse_Previews: PreviewProvider {
     static var previews: some View {
-        RoomListView(hospital_id: 1)
+        RoomListViewNurse()
     }
 }

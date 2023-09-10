@@ -49,6 +49,8 @@ struct HospitalView: View {
                     NavigationLink(destination: RoomListView(hospital_id: 5)) {
                         Text("Patient")
                             .padding()
+                            .frame(maxWidth: .infinity)
+                            
                     }
                     
                     NavigationLink(destination: RoomListViewNurse()) {
@@ -80,7 +82,7 @@ struct PopUpView<Content: View>: View {
                             .cornerRadius(10)
                             .padding()
                     }
-                    .frame(width: geometry.size.width * 1.2, height: 150) // Adjust the size as needed
+                    .frame(width: geometry.size.width * 0.8, height: 150) // Adjust the size as needed
                     .background(Color.clear)
                     .cornerRadius(10)
                 }

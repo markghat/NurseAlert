@@ -1,5 +1,5 @@
 //
-//  Hospital .swift
+//  Hospital.swift
 //  NurseAlert
 //
 //  Created by Tomas Esber on 9/9/23.

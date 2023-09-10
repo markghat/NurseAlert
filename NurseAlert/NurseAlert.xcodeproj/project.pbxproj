@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61AA88672AAD5B8E00AAA601 /* Hospital .swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA88662AAD5B8E00AAA601 /* Hospital .swift */; };
+		61AA88692AAD5D2900AAA601 /* HospitalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA88682AAD5D2900AAA601 /* HospitalView.swift */; };
 		61AB36142AAC2A1200AD7DFB /* NurseAlertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB36132AAC2A1200AD7DFB /* NurseAlertApp.swift */; };
 		61AB36162AAC2A1200AD7DFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB36152AAC2A1200AD7DFB /* ContentView.swift */; };
 		61AB36182AAC2A1300AD7DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AB36172AAC2A1300AD7DFB /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61AA88662AAD5B8E00AAA601 /* Hospital .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hospital .swift"; sourceTree = "<group>"; };
+		61AA88682AAD5D2900AAA601 /* HospitalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalView.swift; sourceTree = "<group>"; };
 		61AB36102AAC2A1200AD7DFB /* NurseAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB36132AAC2A1200AD7DFB /* NurseAlertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseAlertApp.swift; sourceTree = "<group>"; };
 		61AB36152AAC2A1200AD7DFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				61AB36152AAC2A1200AD7DFB /* ContentView.swift */,
 				61AB36172AAC2A1300AD7DFB /* Assets.xcassets */,
 				61AB36192AAC2A1300AD7DFB /* Preview Content */,
+				61AA88662AAD5B8E00AAA601 /* Hospital .swift */,
+				61AA88682AAD5D2900AAA601 /* HospitalView.swift */,
 			);
 			path = NurseAlert;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AB36162AAC2A1200AD7DFB /* ContentView.swift in Sources */,
+				61AA88692AAD5D2900AAA601 /* HospitalView.swift in Sources */,
+				61AA88672AAD5B8E00AAA601 /* Hospital .swift in Sources */,
 				61AB36142AAC2A1200AD7DFB /* NurseAlertApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

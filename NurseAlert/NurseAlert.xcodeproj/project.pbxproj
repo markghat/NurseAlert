@@ -17,6 +17,8 @@
 		61AB362F2AAC2A1300AD7DFB /* NurseAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB362E2AAC2A1300AD7DFB /* NurseAlertUITests.swift */; };
 		61AB36312AAC2A1300AD7DFB /* NurseAlertUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB36302AAC2A1300AD7DFB /* NurseAlertUITestsLaunchTests.swift */; };
 		D96688A72AAD66D6006410B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96688A62AAD66D6006410B7 /* HomeView.swift */; };
+		D9D48F142AAD7DF000205D64 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D48F132AAD7DF000205D64 /* ChatView.swift */; };
+		D9D48F162AAD7E0500205D64 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D48F152AAD7E0500205D64 /* Chat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		61AB362E2AAC2A1300AD7DFB /* NurseAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseAlertUITests.swift; sourceTree = "<group>"; };
 		61AB36302AAC2A1300AD7DFB /* NurseAlertUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseAlertUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D96688A62AAD66D6006410B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D9D48F132AAD7DF000205D64 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		D9D48F152AAD7E0500205D64 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				61AB36132AAC2A1200AD7DFB /* NurseAlertApp.swift */,
 				61AB36152AAC2A1200AD7DFB /* ContentView.swift */,
 				D96688A62AAD66D6006410B7 /* HomeView.swift */,
+				D9D48F132AAD7DF000205D64 /* ChatView.swift */,
+				D9D48F152AAD7E0500205D64 /* Chat.swift */,
 				61AB36172AAC2A1300AD7DFB /* Assets.xcassets */,
 				61AB36192AAC2A1300AD7DFB /* Preview Content */,
 				61AA88662AAD5B8E00AAA601 /* Hospital .swift */,
@@ -268,8 +274,10 @@
 			files = (
 				61AB36162AAC2A1200AD7DFB /* ContentView.swift in Sources */,
 				61AA88692AAD5D2900AAA601 /* HospitalView.swift in Sources */,
+				D9D48F162AAD7E0500205D64 /* Chat.swift in Sources */,
 				61AA88672AAD5B8E00AAA601 /* Hospital .swift in Sources */,
 				D96688A72AAD66D6006410B7 /* HomeView.swift in Sources */,
+				D9D48F142AAD7DF000205D64 /* ChatView.swift in Sources */,
 				61AB36142AAC2A1200AD7DFB /* NurseAlertApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

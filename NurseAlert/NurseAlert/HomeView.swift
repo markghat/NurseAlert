@@ -7,7 +7,7 @@ struct HomeView: View {
                 //MARK: - HEADER
                 Spacer()
                 
-                Image("Duke-Hospital-Logo")
+                Image("NA-Logo2")
                     .resizable()
                     .scaledToFit()
                     .padding()

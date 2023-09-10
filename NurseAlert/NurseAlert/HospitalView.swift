@@ -46,7 +46,7 @@ struct HospitalView: View {
                 VStack {
                 // Hide the NavigationLink, but keep it functional
                     
-                    NavigationLink(destination: RoomListView()) {
+                    NavigationLink(destination: RoomListView(hospital_id: 1)) {
                         Text("Patient")
                             .padding()
                     }

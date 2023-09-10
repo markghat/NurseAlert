@@ -11,7 +11,7 @@ struct RoomListViewNurse: View {
     
     var body: some View {
         NavigationLink(destination: NurseView()){
-            List(getRoomsInHospital(hospital_id: "1"), id: \.self) { room in
+            List(getRoomsInHospital(hospital_id: 1), id: \.self) { room in
                 NavigationLink {
                     // TODO: send to LLM chat
                 } label: {
@@ -49,6 +49,6 @@ struct RoomRowNurse: View {
 
 struct RoomListViewNurse_Previews: PreviewProvider {
     static var previews: some View {
-        RoomListView()
+        RoomListView(hospital_id: 1)
     }
 }

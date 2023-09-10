@@ -3,7 +3,9 @@ import SwiftUI
 struct ChatView: View {
     @State private var messageText = ""
     @State private var chatMessages: [String] = []
-
+    var hospital_id: Int
+    var room_id: Int
+    
     var body: some View {
         
         VStack {
@@ -22,7 +24,9 @@ struct ChatView: View {
                 Button(action: {
                     if !messageText.isEmpty {
                         chatMessages.append(messageText)
+                        sendToLLM(textMessage: messageText, hospital_id: hospital_id, room_id: room_id)
                         messageText = ""
+                        chatMessages.append("Your caretaker has been notified of your request!")
                     }
                 }) {
                     Text("Send")
@@ -35,8 +39,9 @@ struct ChatView: View {
     }
 }
 
+
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        ChatView(hospital_id: 1, room_id: 1)
     }
 }

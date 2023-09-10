@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct RoomListView: View {
+    var hospital_id: Int
     
     var body: some View {
-        NavigationLink(destination: ChatView()){
-            List(getRoomsInHospital(hospital_id: "1"), id: \.self) { room in
+        NavigationLink(destination: ChatView(hospital_id: hospital_id, room_id: 2)){
+            List(getRoomsInHospital(hospital_id: 1), id: \.self) { room in
                 NavigationLink {
                     // TODO: send to LLM chat
                 } label: {
@@ -49,6 +50,6 @@ struct RoomRow: View {
 
 struct RoomListView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomListView()
+        RoomListView(hospital_id: 1)
     }
 }

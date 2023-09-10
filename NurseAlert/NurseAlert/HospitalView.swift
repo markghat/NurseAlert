@@ -3,9 +3,8 @@ import SwiftUI
 struct HospitalView: View {
     @State private var selectedHospital: Hospital?
     @State private var isPopUpVisible = false
-
-    var hospitals = getHospital() // Assuming you have a function to retrieve hospitals
-    
+    @State private var isNavigatingToRoomList = false
+    var hospitals = getHospital() // Assuming you have a function to retrieve hospitals    @State private var isRoomListViewVisible = false
     var body: some View {
         List {
             ForEach(hospitals, id: \.self) { hospital in
@@ -24,6 +23,11 @@ struct HospitalView: View {
                             .foregroundColor(Color.black)
                     }
                     .padding(20)
+                    .background(Color.clear)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 10, style: .circular)
+                                                .stroke(Color.black, lineWidth: 2)
+                                        )
                 }
                 .buttonStyle(PlainButtonStyle())
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -40,24 +44,20 @@ struct HospitalView: View {
         .overlay(
             PopUpView(isVisible: $isPopUpVisible) {
                 VStack {
-                    Button(action: {
-                        // Action for the "Patient" button (e.g., connect to RoomListView)
-                        isPopUpVisible.toggle()
-                        // Add your navigation code here
-                    }) {
+                // Hide the NavigationLink, but keep it functional
+                    
+                    NavigationLink(destination: RoomListView()) {
                         Text("Patient")
                             .padding()
                     }
-                    Button(action: {
-                        // Action for the "Provider" button (e.g., do something else)
-                        isPopUpVisible.toggle()
-                    }) {
+                    
+                    NavigationLink(destination: RoomListViewNurse()) {
                         Text("Provider")
                             .padding()
                     }
                 }
             }
-        )
+)
     }
 }
 
@@ -80,7 +80,7 @@ struct PopUpView<Content: View>: View {
                             .cornerRadius(10)
                             .padding()
                     }
-                    .frame(width: geometry.size.width * 0.8, height: 150) // Adjust the size as needed
+                    .frame(width: geometry.size.width * 1.2, height: 150) // Adjust the size as needed
                     .background(Color.clear)
                     .cornerRadius(10)
                 }

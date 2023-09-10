@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61AA88672AAD5B8E00AAA601 /* Hospital .swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA88662AAD5B8E00AAA601 /* Hospital .swift */; };
-		61AA88692AAD5D2900AAA601 /* HospitalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA88682AAD5D2900AAA601 /* HospitalView.swift */; };
 		15B92C6E2AAD54DC0006B951 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B92C6D2AAD54DC0006B951 /* RoomListView.swift */; };
 		15B92C702AAD54FA0006B951 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B92C6F2AAD54FA0006B951 /* Room.swift */; };
+		61AA88672AAD5B8E00AAA601 /* Hospital .swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA88662AAD5B8E00AAA601 /* Hospital .swift */; };
+		61AA88692AAD5D2900AAA601 /* HospitalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA88682AAD5D2900AAA601 /* HospitalView.swift */; };
 		61AB36142AAC2A1200AD7DFB /* NurseAlertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB36132AAC2A1200AD7DFB /* NurseAlertApp.swift */; };
 		61AB36162AAC2A1200AD7DFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB36152AAC2A1200AD7DFB /* ContentView.swift */; };
 		61AB36182AAC2A1300AD7DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AB36172AAC2A1300AD7DFB /* Assets.xcassets */; };
@@ -18,6 +18,7 @@
 		61AB36252AAC2A1300AD7DFB /* NurseAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB36242AAC2A1300AD7DFB /* NurseAlertTests.swift */; };
 		61AB362F2AAC2A1300AD7DFB /* NurseAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB362E2AAC2A1300AD7DFB /* NurseAlertUITests.swift */; };
 		61AB36312AAC2A1300AD7DFB /* NurseAlertUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB36302AAC2A1300AD7DFB /* NurseAlertUITestsLaunchTests.swift */; };
+		D941157B2AAD9B2C00D0AFEF /* RoleSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941157A2AAD9B2C00D0AFEF /* RoleSelectView.swift */; };
 		D96688A72AAD66D6006410B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96688A62AAD66D6006410B7 /* HomeView.swift */; };
 		D9D48F142AAD7DF000205D64 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D48F132AAD7DF000205D64 /* ChatView.swift */; };
 		D9D48F162AAD7E0500205D64 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D48F152AAD7E0500205D64 /* Chat.swift */; };
@@ -41,10 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		61AA88662AAD5B8E00AAA601 /* Hospital .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hospital .swift"; sourceTree = "<group>"; };
-		61AA88682AAD5D2900AAA601 /* HospitalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalView.swift; sourceTree = "<group>"; };
 		15B92C6D2AAD54DC0006B951 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		15B92C6F2AAD54FA0006B951 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		61AA88662AAD5B8E00AAA601 /* Hospital .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hospital .swift"; sourceTree = "<group>"; };
+		61AA88682AAD5D2900AAA601 /* HospitalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalView.swift; sourceTree = "<group>"; };
 		61AB36102AAC2A1200AD7DFB /* NurseAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB36132AAC2A1200AD7DFB /* NurseAlertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseAlertApp.swift; sourceTree = "<group>"; };
 		61AB36152AAC2A1200AD7DFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		61AB362A2AAC2A1300AD7DFB /* NurseAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AB362E2AAC2A1300AD7DFB /* NurseAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseAlertUITests.swift; sourceTree = "<group>"; };
 		61AB36302AAC2A1300AD7DFB /* NurseAlertUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseAlertUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D941157A2AAD9B2C00D0AFEF /* RoleSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectView.swift; sourceTree = "<group>"; };
 		D96688A62AAD66D6006410B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D9D48F132AAD7DF000205D64 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D9D48F152AAD7E0500205D64 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				61AB36192AAC2A1300AD7DFB /* Preview Content */,
 				61AA88662AAD5B8E00AAA601 /* Hospital .swift */,
 				61AA88682AAD5D2900AAA601 /* HospitalView.swift */,
+				D941157A2AAD9B2C00D0AFEF /* RoleSelectView.swift */,
 				15B92C6D2AAD54DC0006B951 /* RoomListView.swift */,
 				15B92C6F2AAD54FA0006B951 /* Room.swift */,
 			);
@@ -282,6 +285,7 @@
 				61AB36162AAC2A1200AD7DFB /* ContentView.swift in Sources */,
 				61AA88692AAD5D2900AAA601 /* HospitalView.swift in Sources */,
 				D9D48F162AAD7E0500205D64 /* Chat.swift in Sources */,
+				D941157B2AAD9B2C00D0AFEF /* RoleSelectView.swift in Sources */,
 				61AA88672AAD5B8E00AAA601 /* Hospital .swift in Sources */,
 				D96688A72AAD66D6006410B7 /* HomeView.swift in Sources */,
 				D9D48F142AAD7DF000205D64 /* ChatView.swift in Sources */,

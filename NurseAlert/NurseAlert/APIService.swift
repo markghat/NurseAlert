@@ -9,26 +9,26 @@ import Foundation
 
 //let base_url = "https://97lvc2d422.execute-api.us-east-1.amazonaws.com/test/"
 //
-//func makeAPICall(formatted_url: String) -> String {
-//    guard let url = URL(string: formatted_url)
-//    else {
-//        return "Error"
-//    }
-//    let request = NSMutableURLRequest(url: url as URL)
-//        request.httpMethod = "GET"
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//    var jsonString = "emptyString"
-//    let task: Void = URLSession.shared.dataTask(with: request as URLRequest) {
-//        data, response, error in
-//        if let data = data, let string = String(data: data, encoding: .utf8) {
-//            jsonString = string
-//
-//        } else {
-//            return
-//        }
-//    }.resume()
-//    return jsonString
-//}
+func makeAPICall(formatted_url: String) -> String {
+    guard let url = URL(string: formatted_url)
+    else {
+        return "Error"
+    }
+    let request = NSMutableURLRequest(url: url as URL)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    var jsonString = "emptyString"
+    let task: Void = URLSession.shared.dataTask(with: request as URLRequest) {
+        data, response, error in
+        if let data = data, let string = String(data: data, encoding: .utf8) {
+            jsonString = string
+
+        } else {
+            return
+        }
+    }.resume()
+    return jsonString
+}
 //
 //func getHospitals() -> String {
 //    let query_string = base_url + "getHospitals"

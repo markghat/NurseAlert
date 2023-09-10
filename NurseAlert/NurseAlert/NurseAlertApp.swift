@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct NurseAlertApp: App {
+    @StateObject var dataLoader = DataLoader(apiClient: DataLoaderAPIService())
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HospitalViewV2()
+                .environmentObject(dataLoader)
         }
     }
 }

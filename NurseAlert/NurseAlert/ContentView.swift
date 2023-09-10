@@ -43,6 +43,11 @@ struct ContentView: View {
             }
         }.resume()
     }
+    
+    private func request() {
+        print("hello")
+        return
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

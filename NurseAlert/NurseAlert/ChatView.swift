@@ -5,6 +5,7 @@ struct ChatView: View {
     @State private var chatMessages: [String] = []
 
     var body: some View {
+        
         VStack {
             List(chatMessages, id: \.self) { message in
                 Text(message)
